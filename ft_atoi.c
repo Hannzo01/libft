@@ -1,36 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hannzo <hannzo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/13 21:18:02 by hannzo            #+#    #+#             */
-/*   Updated: 2024/10/13 21:29:59 by hannzo           ###   ########.fr       */
+/*   Created: 2024/10/13 21:48:20 by hannzo            #+#    #+#             */
+/*   Updated: 2024/10/13 22:13:28 by hannzo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_atoi(const char *nptr)
 {
-	size_t			i;
-	unsigned char	*p;
+	int	i;
+	int	res;
+	int	sign;
 
 	i = 0;
-	*p = s;
-	while (i < n)
+	res = 0;
+	sign = 1;
+	while (nptr[i] == ' ' || nptr[i] == '\t')
+		i++;
+	if (nptr[i] == '+' || nptr[i] == '-')
 	{
-		p[i] = c;
+		if (nptr[i] == '-')
+			sign *= -1;
 		i++;
 	}
-	return (s);
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		res = res * 10 + nptr[i] - '0';
+		i++;
+	}
+	return (res * sign);
 }
 /*
 int main()
 {
-    int arr = 257;
-    ft_memset(&arr,0,1);
-    printf("%d\n", arr);
+	int result = ft_atoi ("  23-34");
+	printf("%d", result);
 }
 */

@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hannzo <hannzo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/13 21:18:02 by hannzo            #+#    #+#             */
-/*   Updated: 2024/10/13 21:29:59 by hannzo           ###   ########.fr       */
+/*   Created: 2024/10/13 22:25:00 by hannzo            #+#    #+#             */
+/*   Updated: 2024/10/13 22:31:50 by hannzo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+char	*ft_strcat(char *dest, const char *src)
 {
-	size_t			i;
-	unsigned char	*p;
+	int	i;
+	int	j;
 
 	i = 0;
-	*p = s;
-	while (i < n)
-	{
-		p[i] = c;
+	j = 0;
+	while (dest[i] != '\0')
 		i++;
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
-	return (s);
+	dest[i] = '\0';
+	return (dest);
 }
-/*
-int main()
-{
-    int arr = 257;
-    ft_memset(&arr,0,1);
-    printf("%d\n", arr);
-}
-*/

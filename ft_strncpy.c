@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hannzo <hannzo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/13 21:18:02 by hannzo            #+#    #+#             */
-/*   Updated: 2024/10/13 21:29:59 by hannzo           ###   ########.fr       */
+/*   Created: 2024/10/13 22:41:15 by hannzo            #+#    #+#             */
+/*   Updated: 2024/10/13 22:47:56 by hannzo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
-	size_t			i;
-	unsigned char	*p;
+	size_t	i;
 
 	i = 0;
-	*p = s;
-	while (i < n)
+	while (src[i] != '\0' && i < n)
 	{
-		p[i] = c;
+		dest[i] = src[i];
 		i++;
 	}
-	return (s);
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }
-/*
-int main()
-{
-    int arr = 257;
-    ft_memset(&arr,0,1);
-    printf("%d\n", arr);
-}
-*/
