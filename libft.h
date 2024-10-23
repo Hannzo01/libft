@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hannzo <hannzo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/13 21:18:19 by hannzo            #+#    #+#             */
-/*   Updated: 2024/10/13 22:49:09 by hannzo           ###   ########.fr       */
+/*   Created: 2024/10/23 13:29:42 by kemzouri          #+#    #+#             */
+/*   Updated: 2024/10/23 13:29:46 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,6 @@ int	ft_isprint(int c);
 int	ft_isascii(int c);
 int	ft_isalnum(int c);
 int	ft_atoi(const char *nptr);
-int	ft_strcmp(const char *s1, const char *s2);
-char	*ft_strcat(char *dest, const char *src);
-char	*ft_strcpy(char *dest, const char *src);
-char	*ft_strncpy(char *dest, const char *src, size_t n);
 char	*ft_strdup(const char *s);
 
 #endif
