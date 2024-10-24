@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 21:42:36 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/24 21:42:37 by kemzouri         ###   ########.fr       */
+/*   Created: 2024/10/24 22:28:29 by kemzouri          #+#    #+#             */
+/*   Updated: 2024/10/24 22:29:37 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "libft.h"
 
-int	ft_isprint(int c)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	if (c >= 33 && c <= 122)
-		return (1);
-	return (0);
+	
 }
