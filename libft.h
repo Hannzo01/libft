@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hannzo <hannzo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 13:29:42 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/24 14:35:18 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/10/24 17:23:13 by hannzo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,4 @@ char	*ft_strdup(const char *s);
 char *ft_strchr(const char *s, int c);
 char *ft_strrchr(const char *s, int c);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
-
-
-
-
 #endif
