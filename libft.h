@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 13:29:42 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/24 22:29:27 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/10/26 14:06:49 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,14 @@ int	ft_isascii(int c);
 int	ft_isalnum(int c);
 int	ft_atoi(const char *nptr);
 char	*ft_strdup(const char *s);
-char *ft_strchr(const char *s, int c);
-char *ft_strrchr(const char *s, int c);
-int ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
-char *ft_strcpy(char *src, char *dest);
+char	*ft_strcpy(char *src, char *dest);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
-
-
+char	*ft_strnstr(const char *big, const char *little, size_t len);
+void	*ft_memset(void *s, int c, size_t n);
+void	ft_bzero(void *s, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 #endif

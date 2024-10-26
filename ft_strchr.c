@@ -6,27 +6,28 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 13:52:48 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/23 16:07:45 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/10/26 13:46:13 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	char*	p;
+	char	*p;
+
 	while (*s)
 	{
 		if (*s == c)
 		{
 			p = (char *)s;
-			return p;
+			return (p);
 		}
-		s++; 
+		s++;
 	}
 	if (c == '\0')
-		return (char *)s;
-	return NULL;
+		return ((char *)s);
+	return (NULL);
 }
 /*
 int main()

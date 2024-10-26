@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 15:41:32 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/26 13:48:26 by kemzouri         ###   ########.fr       */
+/*   Created: 2024/10/25 20:03:30 by kemzouri          #+#    #+#             */
+/*   Updated: 2024/10/26 13:58:57 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	char	*p;
+	size_t			i;
+	unsigned char	*p;
 
-	p = NULL;
-	while (*s)
+	p = (unsigned char *) s;
+	i = 0;
+	while (i < n)
 	{
-		if (*s == (char)c)
-			p = (char *)s;
-		s++;
+		p[i] = (unsigned char) c;
+		i++;
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return (p);
+	return (s);
 }
-/*
-int main()
-{
-	const char s[] = "kenza,hh,labass";
-	int c = 0;
-	char *res = ft_strrchr(s,c);
-	if (res != NULL)
-		printf("'%s'\n", res);
-}
-*/

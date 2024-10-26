@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 15:41:32 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/26 13:48:26 by kemzouri         ###   ########.fr       */
+/*   Created: 2024/10/26 10:58:00 by kemzouri          #+#    #+#             */
+/*   Updated: 2024/10/26 13:55:34 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_bzero(void *s, size_t n)
 {
-	char	*p;
+	unsigned char	*p;
+	size_t			i;
 
-	p = NULL;
-	while (*s)
+	i = 0;
+	p = (unsigned char *)s;
+	while (i < n)
 	{
-		if (*s == (char)c)
-			p = (char *)s;
-		s++;
+		p[i] = '\0';
+		i++;
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return (p);
 }
-/*
-int main()
-{
-	const char s[] = "kenza,hh,labass";
-	int c = 0;
-	char *res = ft_strrchr(s,c);
-	if (res != NULL)
-		printf("'%s'\n", res);
-}
-*/

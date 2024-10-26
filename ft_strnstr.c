@@ -1,39 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 15:41:32 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/26 13:48:26 by kemzouri         ###   ########.fr       */
+/*   Created: 2024/10/25 14:13:48 by kemzouri          #+#    #+#             */
+/*   Updated: 2024/10/25 14:57:33 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strrchr(const char *s, int c)
+char *ft_strnstr(const char *big, const char *little, size_t len)
 {
-	char	*p;
-
-	p = NULL;
-	while (*s)
-	{
-		if (*s == (char)c)
-			p = (char *)s;
-		s++;
-	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return (p);
+	
 }
-/*
-int main()
-{
-	const char s[] = "kenza,hh,labass";
-	int c = 0;
-	char *res = ft_strrchr(s,c);
-	if (res != NULL)
-		printf("'%s'\n", res);
-}
-*/
