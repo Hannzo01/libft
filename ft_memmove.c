@@ -1,38 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 20:03:30 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/26 16:01:07 by kemzouri         ###   ########.fr       */
+/*   Created: 2024/10/26 14:16:14 by kemzouri          #+#    #+#             */
+/*   Updated: 2024/10/26 17:08:31 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-
-
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t			i;
-	unsigned char	*p;
+	size_t	i;
+	char p[n];
+	char *d;
+	char *s = (char *) src;
+	d = (char *)dest;
 
-	p = (unsigned char *) s;
 	i = 0;
 	while (i < n)
 	{
-		p[i] = (unsigned char) c;
+		p[i] = s[i];
 		i++;
 	}
-	return (s);
+	i = 0;
+	while (i < n)
+	{
+		d[i] = p[i];
+		i++;
+	}
+	return (dest);
 }
 
 /*
 int main()
 {
-	char s[] = "hello everyonbe";
-	printf("retrned: %s\n", (char *) ft_memset(s, 'b', 5));	
+	char str[] = "123456789";
+	//memmove(str+1, str, 4);
+	//ft_memmove(str+2, str, 6);
+	printf("%s\n",(char *)memmove(str+1, str, 3) );
+	//printf("%s",str);
 }
 */
