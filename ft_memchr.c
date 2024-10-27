@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 09:32:41 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/27 10:15:41 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/10/27 14:31:25 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
-	unsigned char* p;
+	size_t			i;
+	unsigned char	*p;
 
 	i = 0;
 	p = (unsigned char *)s;
@@ -25,5 +25,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return (s + i);
 		i++;
 	}
-	return (NULL);	
+	return (NULL);
 }

@@ -6,13 +6,11 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 20:03:30 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/26 16:01:07 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/10/27 14:27:38 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-
 
 void	*ft_memset(void *s, int c, size_t n)
 {
