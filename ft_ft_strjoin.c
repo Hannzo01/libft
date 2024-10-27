@@ -1,30 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_ft_strjoin.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 11:00:10 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/27 12:04:52 by kemzouri         ###   ########.fr       */
+/*   Created: 2024/10/27 13:19:20 by kemzouri          #+#    #+#             */
+/*   Updated: 2024/10/27 13:19:21 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_calloc(size_t nmemb, size_t size)
-{
-	size_t	i;
-	unsigned char *p;
-
-	i = 0;
-	p = malloc(nmemb * size);
-	if (p == NULL)
-		return NULL;
-	while (i < nmemb)
-	{
-		p[i] = 0;
-		i++;
-	}
-	return ((void *)p);
-}
