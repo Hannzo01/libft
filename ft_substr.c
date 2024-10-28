@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:39:00 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/27 16:41:57 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/10/28 11:38:25 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t		leng;
 	char		*sub;
 
-	i = 1;
-	leng = strlen(s) - start;
+	
+	if (!s)
+		return (NULL);
+	i = 0;
+	leng = ft_strlen(s) - start;
 	if (leng > len)
 		leng = len;
 	sub = malloc(sizeof(char) * leng + 1);
@@ -35,8 +38,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (sub);
 }
 
+/*
 int main()
 {
-	printf("%s\n", ft_substr("ABCDEF", 2, 3));
+	printf("%s\n", ft_substr(, 3, 4));
 }
-
+*/
