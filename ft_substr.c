@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:39:00 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/28 11:38:25 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/10/29 10:26:56 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t		leng;
 	char		*sub;
 
-	
 	if (!s)
 		return (NULL);
 	i = 0;

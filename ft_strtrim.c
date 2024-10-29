@@ -6,18 +6,18 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 10:28:08 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/28 11:39:21 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/10/29 10:26:02 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int check(char c, char const *set)
-// kn9lb wach kayn char f set
+int	check(char c, char const *set)
 {
-	size_t	i;	
+	size_t	i;
+
 	i = 0;
-	while(set[i])
+	while (set[i])
 	{
 		if (c == set[i])
 			return (1);
@@ -33,7 +33,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	start = 0;
 	end = ft_strlen(s1) - 1;
-	while (check(s1[start],set) == 1)
+	while (check(s1[start], set) == 1)
 		start++;
 	while (check(s1[end], set) == 1)
 		end--;
