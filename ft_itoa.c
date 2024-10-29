@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 11:43:34 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/29 10:24:13 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/10/29 14:43:49 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int main()
 {
 	//int counter = ft_count(9);
 	//printf("%d\n", counter);
-	char *str = ft_itoa(0);
+	char *str = ft_itoa(12568);
 	printf("%s\n", str);
 }
 */
