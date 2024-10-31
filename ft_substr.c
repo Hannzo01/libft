@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:39:00 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/29 20:45:51 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/10/31 13:21:21 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (sub);
 }
 
-
+/*
 int main()
 {
 	char *s = ft_substr(NULL, 3, 4);
 	printf("%s\n", s);
 }
-
+*/
