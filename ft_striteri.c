@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 14:51:37 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/02 15:51:19 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/02 18:04:57 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int main()
 void	add(unsigned int i, char *c)
 {
 	if ( i % 2 == 0)
-		c[0] += 1;
+		*c += 1;
 	if (f == NULL || s == NULL)
 		return; we returned " return; " insted of return NULL bcz the function return is void 
 }
