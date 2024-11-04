@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:46:18 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/04 11:55:19 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:54:35 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,32 +33,31 @@ static int	count_words(char const *s, char c)
 	return (counter);
 }
 
-static void	free_kolchi(char **p, int chmn_str)
+static void	free_kolchi(char ***p, int chmn_str)
 {
 	while (chmn_str > 0)
 	{
-		free (p[chmn_str]);
 		chmn_str--;
+		free((*p)[chmn_str]);
 	}
-	p = NULL;
+	free(*p);
+	*p = NULL;
 }
 
 char	**ft_split(char const *s, char c)
 {
 	int		i;
 	char	**p;
-	int		counter;
 	int		chmn_str;
 	int		sep_pos;
 
 	i = 0;
 	sep_pos = 0;
 	chmn_str = 0;
-	counter = count_words (s, c);
-	p = malloc((counter + 1) * sizeof(char *));
+	p = malloc((count_words (s, c) + 1) * sizeof(char *));
 	if (p == NULL)
 		return (NULL);
-	while (chmn_str < counter)
+	while (chmn_str < count_words (s, c))
 	{
 		while (s[sep_pos] == c)
 			sep_pos++;
@@ -66,14 +65,11 @@ char	**ft_split(char const *s, char c)
 			i++;
 		p[chmn_str] = ft_substr(s, sep_pos, i);
 		if (p[chmn_str] == NULL)
-		{
-			free_kolchi(p, chmn_str);
-			return (NULL);
-		}
+			return (free_kolchi(&p, chmn_str), NULL);
 		sep_pos = sep_pos + i;
 		chmn_str++;
 	}
-	p[counter] = '\0';
+	p[chmn_str] = NULL;
 	return (p);
 }
 /*
@@ -87,5 +83,4 @@ int main()
 		
 	}
 
-}
-*/
+}*/
