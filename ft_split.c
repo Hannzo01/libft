@@ -6,13 +6,13 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:46:18 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/31 18:11:03 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/04 11:55:19 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	i;
 	int	counter;
@@ -33,62 +33,59 @@ int	count_words(char *s, char c)
 	return (counter);
 }
 
-int ln(char *s, char c)
+static void	free_kolchi(char **p, int chmn_str)
 {
-	int	i;
-	int len;
-	
-	i = 0;
-	len = 0;
-	while (s[i])
+	while (chmn_str > 0)
 	{
-		while (s[i] == c)
-			i++;
-		while (s[i] != '\0' && s[i] != c)
-		{
-				i++;
-				len++;
-		}
+		free (p[chmn_str]);
+		chmn_str--;
 	}
-	return (len);
+	p = NULL;
 }
-char	*ft_allocation(int len, char *s)
-{
-	int	i;
-	char *ptr;
 
-	i = 0;
-	ptr = malloc(len + 1);
-	if (ptr = NULL)
-		return (NULL);
-	while (i < len)
-	{
-		p[i] = *s[i];
-		i++;
-	}
-	return p;
-}
 char	**ft_split(char const *s, char c)
 {
 	int		i;
-	char 	**p;
+	char	**p;
 	int		counter;
-	int		cw;
-	
+	int		chmn_str;
+	int		sep_pos;
+
 	i = 0;
-	cw = 0;
+	sep_pos = 0;
+	chmn_str = 0;
+	counter = count_words (s, c);
 	p = malloc((counter + 1) * sizeof(char *));
 	if (p == NULL)
 		return (NULL);
-	while (cw < counter)
+	while (chmn_str < counter)
 	{
-		p[cw] = malloc((ln(s, char c) + 1))
+		while (s[sep_pos] == c)
+			sep_pos++;
+		while (s[sep_pos + i] != c && s[i + sep_pos] != '\0')
+			i++;
+		p[chmn_str] = ft_substr(s, sep_pos, i);
+		if (p[chmn_str] == NULL)
+		{
+			free_kolchi(p, chmn_str);
+			return (NULL);
+		}
+		sep_pos = sep_pos + i;
+		chmn_str++;
 	}
-	
+	p[counter] = '\0';
+	return (p);
 }
-
+/*
 int main()
 {
-	int res = count_words("  ", ' ');
-	printf("%d", res);
+	const char *s = "  kenza salam  labass  kolchi bikhirr hh  ";
+	char **p = ft_split(s, ' ');
+	for (int i = 0; i < count_words(s, ' ') ; i++)
+	{
+		printf("%s\n", p[i]);
+		
+	}
+
 }
+*/
