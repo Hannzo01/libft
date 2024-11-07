@@ -6,13 +6,13 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 10:28:08 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/06 21:24:24 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/07 13:07:02 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check(char c, char const *set)
+static int	check(char c, char const *set)
 {
 	size_t	i;
 

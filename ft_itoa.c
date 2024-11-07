@@ -6,13 +6,13 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 11:43:34 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/06 19:02:12 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/07 13:07:49 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count(long nbr)
+static int	ft_count(long nbr)
 {
 	int	counter;
 
