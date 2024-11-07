@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:39:00 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/31 13:21:21 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/06 15:47:43 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
 	i = 0;
 	leng = ft_strlen(s) - start;
-	if (leng > len)
+	if (leng >= len)
 		leng = len;
 	sub = malloc(sizeof(char) * leng + 1);
 	if (sub == NULL)

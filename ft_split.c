@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:46:18 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/04 17:54:35 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:14:25 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static int	count_words(char const *s, char c)
 	int	i;
 	int	counter;
 
+	if (s == NULL)
+		return (0);
 	i = 0;
 	counter = 0;
 	while (s[i] != '\0')
@@ -35,6 +37,8 @@ static int	count_words(char const *s, char c)
 
 static void	free_kolchi(char ***p, int chmn_str)
 {
+	if (p == NULL || *p == NULL)
+        return ;
 	while (chmn_str > 0)
 	{
 		chmn_str--;
@@ -51,7 +55,6 @@ char	**ft_split(char const *s, char c)
 	int		chmn_str;
 	int		sep_pos;
 
-	i = 0;
 	sep_pos = 0;
 	chmn_str = 0;
 	p = malloc((count_words (s, c) + 1) * sizeof(char *));
@@ -61,6 +64,7 @@ char	**ft_split(char const *s, char c)
 	{
 		while (s[sep_pos] == c)
 			sep_pos++;
+		i = 0;
 		while (s[sep_pos + i] != c && s[i + sep_pos] != '\0')
 			i++;
 		p[chmn_str] = ft_substr(s, sep_pos, i);

@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 13:52:48 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/26 13:46:13 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/06 15:21:43 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*p;
-
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char )c)
 		{
-			p = (char *)s;
-			return (p);
+			return ((char *)s);
 		}
 		s++;
 	}

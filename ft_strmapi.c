@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 09:30:25 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/02 18:20:25 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:23:18 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	i = 0;
 	len = ft_strlen(s);
-	p = malloc(len);
+	p = malloc(len + 1);
 	if (p == NULL)
 		return (NULL);
 	while (s[i])

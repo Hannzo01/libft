@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 10:28:08 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/04 11:52:20 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/06 21:24:24 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int	start;
 	int	end;
 
+	if (!s1)
+		return (NULL);
 	start = 0;
 	end = ft_strlen(s1) - 1;
 	while (check(s1[start], set) == 1)

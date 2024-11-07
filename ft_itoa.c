@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 11:43:34 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/29 14:43:49 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/06 19:02:12 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,27 +37,25 @@ char	*ft_itoa(int n)
 	int		counter;
 	long	nbr;
 	char	*p;
-	int		i;
 
 	nbr = n;
 	counter = ft_count(nbr);
 	p = malloc(sizeof(char) * counter + 1);
 	if (p == NULL)
 		return (NULL);
+	p[counter] = '\0';
 	if (nbr == 0)
-		return ("0");
-	if (nbr < 0)
+		p[0] = '0';
+	else if (nbr < 0)
 	{
 		nbr *= -1;
 		p[0] = '-';
 	}
-	i = counter - 1;
 	while (nbr)
 	{
-		p[i--] = nbr % 10 + 48;
-		nbr /= 10;
+		p[--counter] = nbr % 10 + 48;
+		nbr = nbr / 10;
 	}
-	p[counter] = '\0';
 	return (p);
 }
 
