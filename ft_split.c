@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:46:18 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/06 18:14:25 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/07 12:59:17 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static int	count_words(char const *s, char c)
 static void	free_kolchi(char ***p, int chmn_str)
 {
 	if (p == NULL || *p == NULL)
-        return ;
+		return ;
 	while (chmn_str > 0)
 	{
 		chmn_str--;
