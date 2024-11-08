@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 14:31:05 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/07 15:35:45 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:57:09 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,11 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*head;
 
-	head = NULL;
 	head = malloc(sizeof(t_list));
 	if (head == NULL)
 		return (NULL);
-	head -> content = content;
-	head -> next = NULL;
+	head->content = content;
+	head->next = NULL;
 	return (head);
 }
 /*
