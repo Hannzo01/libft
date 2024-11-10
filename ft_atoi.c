@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 21:42:18 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/06 12:27:34 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/10 15:40:31 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (res * sign);
 }
-/*
-int main()
-{
-	int result = ft_atoi ("  23-34");
-	printf("%d", result);
-}
-*/

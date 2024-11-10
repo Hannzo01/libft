@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hannzo <hannzo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 18:27:55 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/09 17:51:42 by hannzo           ###   ########.fr       */
+/*   Updated: 2024/11/10 09:35:53 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 
 /*
 int main()
+
 {
 	t_list	*head;
 	t_list **lst = &head;

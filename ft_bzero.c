@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 10:58:00 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/10/26 13:55:34 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/10 15:45:50 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,15 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
+/*
+int main()
+{
+	int str[] = {12,89,78,22};
+	ft_bzero(str,sizeof(str));
+	for (int i = 0; i < 4 ; i++)
+	{
+		printf("%d", str[i]);
+		printf("\n");
+	}
+	
+}*/
