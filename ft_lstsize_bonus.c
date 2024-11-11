@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hannzo <hannzo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 09:36:33 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/10 09:36:35 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/11 22:20:28 by hannzo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 int	ft_lstsize(t_list *lst)
 {
 	int		count;
-	t_list	*current;
 
 	if (lst == NULL)
 		return (0);
 	count = 0;
-	current = lst;
-	while (current != NULL)
+	lst = lst;
+	while (lst != NULL)
 	{
-		current = current->next;
+		lst = lst->next;
 		count++;
 	}
 	return (count);
 }
+//delete for header
 /*
 int main()
 {
@@ -41,4 +41,17 @@ int main()
 	int count = ft_lstsize(head);
 	printf("%d", counter);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 */
