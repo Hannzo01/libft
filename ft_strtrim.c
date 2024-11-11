@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 10:28:08 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/07 13:07:02 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/11 15:42:02 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	return (ft_substr(s1, start, end - start + 1));
 }
-/*
-int main()
-{
-	char *res = ft_strtrim( "     ", " ");
-	printf("%s\n", res);
-}
-*/

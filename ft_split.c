@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:46:18 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/07 12:59:17 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/11 16:29:22 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,56 +35,62 @@ static int	count_words(char const *s, char c)
 	return (counter);
 }
 
-static void	free_kolchi(char ***p, int chmn_str)
+static void	free_words(char **p, int num)
 {
 	if (p == NULL || *p == NULL)
 		return ;
-	while (chmn_str > 0)
+	while (num > 0)
 	{
-		chmn_str--;
-		free((*p)[chmn_str]);
+		num--;
+		free(p[num]);
 	}
-	free(*p);
-	*p = NULL;
+	free(p);
+}
+
+static char	*extract_word(char const *s, char c, int *sep_pos)
+{
+	int		start;
+	int		len;
+	char	*word;
+
+	while (s[*sep_pos] == c)
+		(*sep_pos)++;
+	start = *sep_pos;
+	len = 0;
+	while (s[*sep_pos] != c && s[*sep_pos] != '\0')
+	{
+		(*sep_pos)++;
+		len++;
+	}
+	word = ft_substr(s, start, len);
+	return (word);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	int		i;
 	char	**p;
-	int		chmn_str;
+	int		counter;
 	int		sep_pos;
 
 	sep_pos = 0;
-	chmn_str = 0;
-	p = malloc((count_words (s, c) + 1) * sizeof(char *));
+	counter = count_words (s, c);
+	if (!s)
+		return (NULL);
+	p = malloc((counter + 1) * sizeof(char *));
 	if (p == NULL)
 		return (NULL);
-	while (chmn_str < count_words (s, c))
+	i = 0;
+	while (i < counter)
 	{
-		while (s[sep_pos] == c)
-			sep_pos++;
-		i = 0;
-		while (s[sep_pos + i] != c && s[i + sep_pos] != '\0')
-			i++;
-		p[chmn_str] = ft_substr(s, sep_pos, i);
-		if (p[chmn_str] == NULL)
-			return (free_kolchi(&p, chmn_str), NULL);
-		sep_pos = sep_pos + i;
-		chmn_str++;
+		p[i] = extract_word(s, c, &sep_pos);
+		if (p[i] == NULL)
+		{
+			free_words(p, i);
+			return (NULL);
+		}
+		i++;
 	}
-	p[chmn_str] = NULL;
+	p[i] = NULL;
 	return (p);
 }
-/*
-int main()
-{
-	const char *s = "  kenza salam  labass  kolchi bikhirr hh  ";
-	char **p = ft_split(s, ' ');
-	for (int i = 0; i < count_words(s, ' ') ; i++)
-	{
-		printf("%s\n", p[i]);
-		
-	}
-
-}*/

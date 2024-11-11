@@ -6,11 +6,12 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 21:42:18 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/10 15:40:31 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/11 09:54:22 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
 int	ft_atoi(const char *nptr)
 {
@@ -36,3 +37,11 @@ int	ft_atoi(const char *nptr)
 	}
 	return (res * sign);
 }
+/*
+int main()
+{
+	int result = ft_atoi("454554545454545455454545454545545454545");
+	int result2 = atoi("454554545454545455454545454545545454545");
+	printf("%d\n%d \n", result, result2);
+}
+*/

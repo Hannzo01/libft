@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 11:43:34 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/07 13:07:49 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/11 18:44:06 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_itoa(int n)
 
 	nbr = n;
 	counter = ft_count(nbr);
-	p = malloc(sizeof(char) * counter + 1);
+	p = malloc(sizeof(char) * (counter + 1));
 	if (p == NULL)
 		return (NULL);
 	p[counter] = '\0';
@@ -58,14 +58,3 @@ char	*ft_itoa(int n)
 	}
 	return (p);
 }
-
-/*
-#include <limits.h>
-int main()
-{
-	//int counter = ft_count(9);
-	//printf("%d\n", counter);
-	char *str = ft_itoa(12568);
-	printf("%s\n", str);
-}
-*/
