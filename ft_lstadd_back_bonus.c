@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hannzo <hannzo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 09:36:01 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/11 22:20:10 by hannzo           ###   ########.fr       */
+/*   Updated: 2024/11/12 10:32:02 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	current = ft_lstlast(current);
 	current->next = new;
 }
-/*int maiun delete for header file*/

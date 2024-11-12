@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hannzo <hannzo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 09:36:33 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/11 22:20:28 by hannzo           ###   ########.fr       */
+/*   Updated: 2024/11/12 10:32:22 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (count);
 }
-//delete for header
 /*
 int main()
 {

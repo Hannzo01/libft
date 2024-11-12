@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hannzo <hannzo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 18:27:55 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/11 22:19:43 by hannzo           ###   ########.fr       */
+/*   Updated: 2024/11/12 10:32:10 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = *lst;
 	*lst = new;
 }
-
 /*
 int main()
 
