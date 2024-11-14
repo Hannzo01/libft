@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 09:36:33 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/12 10:32:22 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/14 15:28:37 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	ft_lstsize(t_list *lst)
 	if (lst == NULL)
 		return (0);
 	count = 0;
-	lst = lst;
 	while (lst != NULL)
 	{
 		lst = lst->next;

@@ -6,7 +6,7 @@
 /*   By: kemzouri <kemzouri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:16:14 by kemzouri          #+#    #+#             */
-/*   Updated: 2024/11/04 17:53:47 by kemzouri         ###   ########.fr       */
+/*   Updated: 2024/11/14 17:23:51 by kemzouri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 int main()
 {
 	char str[] = "1337 shcool";
-	// ft_memmove(str+1, str, 4);
-	// ft_memmove(str+2, str, 6);
+	ft_memmove(str+1, str, 4);
+	ft_memmove(str+2, str, 6);
 	printf("%s\n",(char *)memmove(str+2, str, 5));
-	//printf("%s",str);
+	printf("%s",str);
 }
 */
